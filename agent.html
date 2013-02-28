@@ -1,0 +1,20 @@
+<script>
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) return unescape(r[2]); return null;
+}
+function psetc() {
+var hash=window.location.hash;
+if(hash!=undefined&&hash!=""){
+	var id=getQueryString("if_id");
+	if(id!=null)
+	document.cookie = "h_"+id+"="+escape(hash);
+}
+}
+psetc();
+</script>
+<!--Ñ¹Ëõ°æ
+<!--
+<script>function getQueryString(a){a=RegExp("(^|&)"+a+"=([^&]*)(&|$)","i");a=window.location.search.substr(1).match(a);return null!=a?unescape(a[2]):null}function psetc(){var a=window.location.hash;if(void 0!=a&&""!=a){var b=getQueryString("if_id");null!=b&&(document.cookie="h_"+b+"="+escape(a))}}psetc();</script>
+-->
